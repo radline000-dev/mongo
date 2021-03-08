@@ -19,5 +19,10 @@ const CommentSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+<<<<<<< HEAD
+=======
+CommentSchema.index({ blog: 1, createdAt: -1 });
+
+>>>>>>> 51a808eeb6a152e2c25779633ce9560ab5fadaf5
 const Comment = mongoose.model("comment", CommentSchema);
 module.exports = { Comment, CommentSchema };

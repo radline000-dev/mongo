@@ -15,6 +15,14 @@ const BlogSchema = new mongoose.Schema(
         last: { type: String, required: true },
       },
     },
+<<<<<<< HEAD
+=======
+    commentsCount: {
+      type: Number,
+      default: 0,
+      required: true,
+    },
+>>>>>>> 51a808eeb6a152e2c25779633ce9560ab5fadaf5
     comments: [CommentSchema],
   },
   { timestamps: true }
