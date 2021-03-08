@@ -43,11 +43,7 @@ app.use(express.json());
 
 //Dev loggin middleware
 if (process.env.NODE_ENV === "development") {
-<<<<<<< HEAD
-  // app.use(morgan("dev"));
-=======
   app.use(morgan("dev"));
->>>>>>> 51a808eeb6a152e2c25779633ce9560ab5fadaf5
 }
 //Cookie-Parser
 app.use(cookieParser());
@@ -65,19 +61,11 @@ app.use(helmet({ contentSecurityPolicy: false }));
 app.use(xss());
 
 // Rate limiting
-<<<<<<< HEAD
-const limiter = rateLimit({
-  windowsMs: 15 * 60 * 1000, // 10 mins
-  max: 120000,
-});
-app.use(limiter);
-=======
 // const limiter = rateLimit({
 //   windowsMs: 15 * 60 * 1000, // 10 mins
 //   max: 120000,
 // });
 // app.use(limiter);
->>>>>>> 51a808eeb6a152e2c25779633ce9560ab5fadaf5
 
 //prevent http param pollution
 app.use(hpp());
@@ -103,15 +91,9 @@ const server = app.listen(PORT, async () => {
   console.log(
     `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
   );
-<<<<<<< HEAD
-  // for (let i = 0; i < 20; i++) {
-  //   await generateFakeData(10, 1, 10);
-  // }
-=======
   // console.time("data on:");
   // await generateFakeData(10, 2, 10);
   // console.timeEnd("data on:");
->>>>>>> 51a808eeb6a152e2c25779633ce9560ab5fadaf5
 });
 
 //handle unhandled promise rejections
