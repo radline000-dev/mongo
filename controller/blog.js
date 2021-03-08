@@ -8,17 +8,11 @@ const asyncHandler = require("../middleware/async");
 const Blog = require("../models/Blog");
 const User = require("../models/User");
 
-<<<<<<< HEAD
-=======
 const { Comment } = require("../models/Comment");
->>>>>>> 51a808eeb6a152e2c25779633ce9560ab5fadaf5
 // @desc    블로그 전체 조회
 // @route   GET /blog
 // @access  Public
 exports.getBlogs = asyncHandler(async (req, res, next) => {
-<<<<<<< HEAD
-  const blogs = await Blog.find().limit(400);
-=======
   let { page } = req.query;
   page = parseInt(page);
 
@@ -26,7 +20,6 @@ exports.getBlogs = asyncHandler(async (req, res, next) => {
     .sort({ updatedAt: 1 })
     .skip(page * 3)
     .limit(3);
->>>>>>> 51a808eeb6a152e2c25779633ce9560ab5fadaf5
   if (!blogs || blogs.length == 0)
     return next(new ErrorResponse("Blog Data is Not Found ", 404));
 
@@ -46,10 +39,7 @@ exports.getBlog = asyncHandler(async (req, res, next) => {
   }
 
   const blog = await Blog.findById(blog_id);
-<<<<<<< HEAD
-=======
   // const commnetCount = await Comment.find({ blog: blog_id }).countDocuments();
->>>>>>> 51a808eeb6a152e2c25779633ce9560ab5fadaf5
   if (!blog) return next(new ErrorResponse("Blog Data is Not Found ", 404));
 
   res.status(200).json({
