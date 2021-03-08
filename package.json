@@ -17,10 +17,6 @@
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-<<<<<<< HEAD
-=======
-    "env-cmd": "^10.1.0",
->>>>>>> 51a808eeb6a152e2c25779633ce9560ab5fadaf5
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
     "express-mongo-sanitize": "^2.0.2",
